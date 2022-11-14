@@ -576,7 +576,7 @@ void M5Display::drawPngUrl(const char *url, uint16_t x, uint16_t y,
     return;
   }
 
-  WiFiClient *stream = http.getStreamPtr();
+  WiFiClient *stream = (WiFiClient *) http.getStreamPtr();
 
   pngle_t *pngle = pngle_new();
 
